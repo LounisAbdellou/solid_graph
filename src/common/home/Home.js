@@ -21,6 +21,13 @@ export function Home() {
                         Trajectories Graph
                     </button>
                 </Link>
+                <Link to="/histogram">
+                    <button
+                        className={styles.button}
+                    >
+                        Histogram Graph
+                    </button>
+                </Link>
             </div>
         </div>
     );

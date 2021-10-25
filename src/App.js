@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Trajectories } from 'features/trajectories/Trajectories';
+import { Histogram } from 'features/histogram/Histogram';
 import { HexMap } from 'common/hexMap/HexMap';
 import { Home } from 'common/home/Home';
 import graphLogo from 'assets/graphLogo.png';
@@ -23,6 +24,9 @@ function App() {
                         </Route>
                         <Route path="/hex" exact>
                             <HexMap />
+                        </Route>
+                        <Route path="/histogram" exact>
+                            <Histogram />
                         </Route>
                         <Route path="/trajectory" exact>
                             <Trajectories />

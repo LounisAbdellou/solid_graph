@@ -27,7 +27,7 @@ export function Trajectories() {
 
     return (
         <div>
-            <ConnectedScatterplot trajectories={trajectories} />
+            {(trajectories.length) ? <ConnectedScatterplot trajectories={trajectories} /> : null}
             <div className={styles.row}>
                 {trajectories.map((person, index) => {
                     return (

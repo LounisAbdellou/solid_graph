@@ -9,9 +9,13 @@ export default function ConnectedScatterplot(props) {
     const trajectoriesGraph = useRef(null);
 
     useEffect(() => {
-        if (personId) {
+        let allIds = props.trajectories.map((person) => {
+            return person.id
+        });
+
+        if (allIds.includes(personId)) {
             personIdChanged()
-        }
+        } // eslint-disable-next-line
     }, [personId])
 
     function personIdChanged() {
@@ -42,7 +46,7 @@ export default function ConnectedScatterplot(props) {
                     id="trajectoriesGraph"
                     ref={trajectoriesGraph}
                 >
-                    <p>You must click on a person's ID</p>
+                    <p>You must select an ID</p>
                 </div>
             </div>
         </div>
